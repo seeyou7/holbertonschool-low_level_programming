@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-*main - Prints the alphabet in lowercase followed by\n
-*
+* print_alphabet - Prints the alphabet in lowercase followed by\n
+*description: Prints the alphabet in lowercase followed by\n
 *Return: Always 0
 */
 
