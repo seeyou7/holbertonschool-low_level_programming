@@ -13,7 +13,7 @@ for (L1 = 0; L1 <= 9; L1++)
 {
 _putchar ('0');
 
-for (L2 = 0; L2 < 10; L2++)
+for (L2 = 1; L2 < 10; L2++)
 {
 X = L1 * L2;
 _putchar (',');
