@@ -21,7 +21,7 @@ _putchar (' ');
 if (X < 10)
 {
 _putchar (' ');
-_putchar (X +'0');
+_putchar (X + '0');
 }
 else
 {
