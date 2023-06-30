@@ -1,7 +1,3 @@
-/*iLa fonction memcpy() copie n octets depuis*/
-/*la zone mémoire src vers la zone mémoire dest*/
-/*Les deux zones ne doivent pas se chevaucher*/
-/*Si c'est le cas, utilisez plutôt memmove(3)*/
 #include "main.h"
 
 /**
@@ -21,3 +17,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 	return (dest);
 }
+/*iLa fonction memcpy() copie n octets depuis*/
+/*la zone mémoire src vers la zone mémoire dest*/
+/*Les deux zones ne doivent pas se chevaucher*/
+/*Si c'est le cas, utilisez plutôt memmove(3)*/
