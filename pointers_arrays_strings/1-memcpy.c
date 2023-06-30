@@ -9,6 +9,7 @@
  *
  * Return: a pointer to the memory area @s
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
@@ -17,7 +18,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 	return (dest);
 }
-/*iLa fonction memcpy() copie n octets depuis*/
+/*iLa fonction copie n octets depuis*/
 /*la zone mémoire src vers la zone mémoire dest*/
 /*Les deux zones ne doivent pas se chevaucher*/
 /*Si c'est le cas, utilisez plutôt memmove(3)*/
