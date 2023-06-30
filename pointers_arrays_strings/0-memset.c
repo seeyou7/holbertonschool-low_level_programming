@@ -20,7 +20,7 @@ char *_memset(char *s, char b, unsigned int n)
 	for (i = 0; i <= n; i++)
 
 /* Remplir l'octet courant avec la valeur @b*/
-		*(s + i) = b;
+		s[i] = b;
 	return (s);
 }
 /*s : Un pointeur vers la zone mémoire à remplir.*/
