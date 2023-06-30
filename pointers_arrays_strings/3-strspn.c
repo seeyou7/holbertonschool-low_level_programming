@@ -10,10 +10,9 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count = 0;
-	int found = 0;
 	int i;
 
-	while (*s != '\0' && !found)
+	while (*s)
 /*tant que le caractère pointé par 's' n'est pas le caractère*/
 /*('\0') et que 'found' est faux*/
 	{
@@ -26,9 +25,10 @@ unsigned int _strspn(char *s, char *accept)
 			if (*s == accept[i])
 			{
 				count++;
-				found = 1;
 				break;
 			}
+			else if (accept[i + 1] == '\0')
+				return (count);
 		}
 		s++;
 	}
