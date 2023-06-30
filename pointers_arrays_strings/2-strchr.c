@@ -18,4 +18,4 @@ char *_strchr(char *s, char c)
 		return (s);
 	return (NULL);
 }
-
+/* second if we did not increment that why i keeped same condition*/ 
