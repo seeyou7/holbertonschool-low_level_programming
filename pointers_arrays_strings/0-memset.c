@@ -17,7 +17,7 @@ char *_memset(char *s, char b, unsigned int n)
 	unsigned int i;
 
 /* Parcourir chaque octet de la zone mémoire*/
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 
 /* Remplir l'octet courant avec la valeur @b*/
 		s[i] = b;
