@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strchr - Function that shearch a charcter in string
  * @s: the string to search in
@@ -13,6 +14,6 @@ char *_strchr(char *s, char c)
 			return (s);
 		s++;
 	}
-	return (0);
+	return NULL;
 }
 
