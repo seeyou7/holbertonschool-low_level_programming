@@ -15,8 +15,8 @@ void _print_rev_recursion(char *s)
 		return;
 /*If true, end of string reached, return and terminate the function */
 	}
-/* Recursive case: call the function recursively with the next character in the string*/
+/*Recursive case:call the function recursively with the next character*/
+/* in the strine*/
 	_print_rev_recursion(s + 1);
 	_putchar(*s);
-}
-		
+}		
