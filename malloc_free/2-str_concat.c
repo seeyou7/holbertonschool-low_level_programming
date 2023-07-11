@@ -3,54 +3,47 @@
 #include <string.h>
 
 /**
-  * string_nconcat -  function that concatenates two strings.
+  * str_nconcat - function that concatenates two strings.
   * @s1: paramater of the function
   * @s2: parameter of the function
-  * @n: ...
   *
   * Return: ptr
   */
 
 char *str_concat(char *s1, char *s2)
 {
-	int s1_length = strlen(s1);
 	int i;
-  int s2_length = strlen(s2);
-  int size = s1_length + s2_length + 1;
-  char *s = calloc(size, sizeof(char));
+	char *new;
+	int s1_lent = strlen(s1);
+	int s2_lent = strlen(s2);
+	int size = s1_lent + s2_lent + 1;
 
-  /* Copy s1 into s*/
-  for (i = 0; i < s1_length; i++)
-    s[i] = s1[i];
 
-  /* Copy s2 into s, but shifted over by the length of s1 to append it after s1!*/
-  for (i = 0; i < s2_length; i++)
-    s[s1_length + i] = s2[i];
+/*Create space for a new char array (string)*/
+/*on the heap large enough to hold the charcters*/
+/*in s1 and s2 AND a null terminator*/
 
-  /* put the null terminator in to end the string*/
-  s[size - 1] = '\0';
-
-  return s;
-}
-
-/**
-	char *total;
-	int i = 0;
-
+/* conditions from  the task*/
 	if (s1 == NULL)
-	     s1 = "";
+		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	total = malloc(strlen(s1[i]) + strlen (s2[i]) + 1);
-	if (total == NULL)
+	new = calloc(size, sizeof(char));
+	if (new == NULL)
 	{
 		return (NULL);
 	}
+	for (i = 0; i < s1_lent; i++)
+		new[i] = s1[i];
 
-	strcpy(total, s1[i]);
-	strcat(total, s2[i]);
-	free(total);
-	return (total);
+/*Copiez s2 dans s, mais décalé par la longueur de s1*/
+/*pour l'ajouter après s1 !*/
+	for (i = 0; i < s2_lent; i++)
+		new[(s1_lent) + i] = s2[i];
+
+/* put the null terminator in to end the string*/
+	new[size - 1] = '\0';
+	return (new);
 }
-*/
+
