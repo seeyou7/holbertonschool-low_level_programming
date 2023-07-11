@@ -24,16 +24,12 @@ char *str_concat(char *s1, char *s2)
 /*in s1 and s2 AND a null terminator*/
 
 /* conditions from  the task*/
-/*	if (s1 == NULL)
+	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-		s2 = "";*/
+		s2 = "";
 
 	new = calloc(size, sizeof(char));
-	if (s1 == NULL)
-                s1 = "";
-        if (s2 == NULL)
-                s2 = "";
 
 	for (i = 0; i < s1_lent; i++)
 		new[i] = s1[i];
