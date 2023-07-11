@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
-  * str_nconcat - function that concatenates two strings.
+  * str_concat - function that concatenates two strings.
   * @s1: paramater of the function
   * @s2: parameter of the function
   *
@@ -30,10 +30,6 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	new = calloc(size, sizeof(char));
-	if (new == NULL)
-	{
-		return (NULL);
-	}
 	for (i = 0; i < s1_lent; i++)
 		new[i] = s1[i];
 
