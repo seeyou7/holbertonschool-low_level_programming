@@ -12,35 +12,24 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i;
+	int i, len1 = 0, len2 = 0;
 	char *new;
-	int s1_lent = strlen(s1);
-	int s2_lent = strlen(s2);
-	int size = s1_lent + s2_lent + 1;
 
-
-/*Create space for a new char array (string)*/
-/*on the heap large enough to hold the charcters*/
-/*in s1 and s2 AND a null terminator*/
-
-/* conditions from  the task*/
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	for (i = 0; s1[i] || s2[i]; i++)
+		len1++;
 
-	new = calloc(size, sizeof(char));
+	new = malloc(sizeof(char) * len1);
+	if (new == NULL)
+		return (NULL);
 
-	for (i = 0; i < s1_lent; i++)
-		new[i] = s1[i];
+	for (i = 0; s1[i]; i++)
+		new[len2++] = s1[i];
+	for (i = 0; s2[i]; i++)
+		new[len2++] = s2[i];
 
-/*Copiez s2 dans s, mais décalé par la longueur de s1*/
-/*pour l'ajouter après s1 !*/
-	for (i = 0; i < s2_lent; i++)
-		new[(s1_lent) + i] = s2[i];
-
-/* put the null terminator in to end the string*/
-	new[size - 1] = '\0';
 	return (new);
 }
-
