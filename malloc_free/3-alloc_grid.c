@@ -2,38 +2,45 @@
 #include <stdlib.h>
 
 /**
-  * alloc_grid - ...
-  * @width: ...
-  * @height: ...
-  *
-  * Return: ...
-  */
+ *alloc_grid - function that returns a pointer to a 2
+ *dimensional array of integers
+ *@width: parameter of thr function
+ *@height: parameter of the function
+ *
+ *Return: int
+ */
+
 int **alloc_grid(int width, int height)
 {
-	int w, h;
-	int  **ptr;
+	int **p;
+	int i, j;
 
-	if (width <= 0 || height <= 0)
-		return (0);
-	ptr = malloc(sizeof(int *) * height);
-	for (h = 0; h < height; h++)
+/* Check if either width or height is zero */
+	if (width == 0 || height == 0)
+		return (NULL);
+
+ /* Allocate memory for the rows of the array */
+	p = malloc(height * sizeof(*p));
+	if (p == NULL)
+		return (NULL);
+
+	for (i = 0; i < height; i++)
 	{
-		ptr[h] = malloc(sizeof(int) * width);
-		if (ptr[h] == NULL)
+ /* Allocate memory for the columns of each row */
+		p[i] = malloc(width * sizeof(int));
+		if (p[i] == NULL)
 		{
-			for (w = 0; w < h; w++)
-			{
-				free(ptr[h]);
-			}
-			free(ptr);
+ /* Free previously allocated memory if allocation fails */
+			for (j = 0; j < height; j++)
+				free(p[j]);
+			free(p);
+			return (NULL);
+		}
+/* Initialize elements of each row to 0 */
+		for (j = 0; j < width; j++)
+		{
+			p[i][j] = 0;
 		}
 	}
-	for (h = 0; h < height; h++)
-	{
-	for (w = 0; w < width; w++)
-	{
-	ptr[h][w] = 0;
-	}
-	}
-	return (ptr);
+	return (p);
 }
