@@ -28,7 +28,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 General
 What are structures, when, why and how to use them
-How to use typedef
+How to use typede
 Requirements
 General
 Allowed editors: vi, vim, emacs
