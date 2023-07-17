@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *print dog - function that print struct dog
+ *print_dog - function that print struct dog
  * @d: pointer to the element of the structt
  *
  * return: if d is NULL print nothing
@@ -14,7 +14,7 @@ void print_dog(struct dog *d)
 
 /*if (d) checks if the pointer d is non-null before */
 	{
-		if ("d->name == NULL")
+		if (d->name == NULL)
 		{
 		printf("Name: (nil)\n");
 		}
