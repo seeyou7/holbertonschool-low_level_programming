@@ -2,7 +2,7 @@
 #define _DOG_H_
 
 /**
- *struct dog - function that define new type 
+ *struct dog - function that define new type
  *@name: element of the struct dog
  *@age:element of the struct dog
  *@owner:element of the struct dog
