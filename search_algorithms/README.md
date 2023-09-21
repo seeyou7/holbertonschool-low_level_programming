@@ -1,7 +1,5 @@
 # C - Search Algorithms
 
-# C - Search Algorithms
-
 This project was completed during my time at Holberton School and focuses on search algorithms.
  I have implemented a variety of search algorithms and provided information about their respective space and time complexities.
 
